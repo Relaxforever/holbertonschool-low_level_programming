@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-char helloworld[] = "\"Programming is like building a multilingual puzzle";
-puts(helloworld);
+puts("\"Programming is like building a multilingual puzzle");
 }
 
