@@ -1,8 +1,8 @@
 #include<stdio.h>
 /**
- * main - Entry point, its a void
+ * main - Entry point
  *
- * Return: helloworld variable
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
