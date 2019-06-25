@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 {
 	int timesten;
 
-	for (timesten = 0; timesten <= 10; timesten++)
+	for (timesten = 1; timesten <= 10; timesten++)
 	{
 		int c;
 
