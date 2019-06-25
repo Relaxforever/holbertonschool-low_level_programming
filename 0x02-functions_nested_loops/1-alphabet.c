@@ -1,22 +1,20 @@
 #include "holberton.h"
 
+
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-
-int main(void)
+* print_alphabet - check the code for Holberton School students.
+*
+* Return: Its a void
+*
+*
+*/
+void print_alphabet(void)
 {
-   
- 
-	print_alphabet()
-	{
-		for(int c = 97; c >= 122; c++)
-		{
-			_putchar(c);
-		}
-		_putchar('\n');
+	int alpha;
 
-	}	
+	for (alpha = 97; alpha <= 122; alpha++)
+	{
+		_putchar(alpha);
+	}
+	_putchar('\n');
 }
