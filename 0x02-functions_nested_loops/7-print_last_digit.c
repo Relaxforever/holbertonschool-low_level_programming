@@ -1,3 +1,4 @@
+
 #include "holberton.h"
 
 /**
@@ -7,9 +8,16 @@
  */
 int print_last_digit(int last)
 {
-	int lasted;
-
 	last = last % 10;
-	lasted = _putchar('0' + last);
-	return (lasted);
+	if (last < 0)
+	{
+		last = -1 * last;
+		_putchar(last + '0');
+		return (last);
+	}
+	else
+	{
+		_putchar(last + '0');
+		return (last);
+	}
 }
