@@ -37,7 +37,10 @@ void print_to_98(int n)
 	}
 	else
 	{
-		printf("%d", n);
+		if (n == 0)
+			{
+			printf("%d", n);
+			}
 	}
 	printf("\n");
 }
