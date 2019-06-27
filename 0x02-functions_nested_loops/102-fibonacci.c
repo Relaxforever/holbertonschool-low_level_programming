@@ -1,12 +1,16 @@
 #include <stdio.h>
-int main (void)
+/**
+*main - prints the fibonacci secuence
+* Return: Always zero
+*/
+int main(void)
 {
 	unsigned long long int i;
-	unsigned long long int fibo = 0;
+	unsigned long long int fibo = 1;
 	unsigned long long int nacci = 1;
 	unsigned long long int nextTerm;
 
-	for (i = 1; i < 52; ++i)
+	for (i = 2; i < 50; ++i)
 	{
 		printf("%lld, ", fibo);
 		nextTerm = fibo + nacci;
@@ -14,5 +18,5 @@ int main (void)
 		nacci = nextTerm;
 	}
 	printf("\n");
-    return 0;
+	return (0);
 }
