@@ -19,7 +19,7 @@ void print_diagonal(int n)
 	{
 		for (tmp = 0; tmp < line; tmp++)
 		{
-			for (tmp2 = 0; tmp2 <= tmp; tmp2++)
+			for (tmp2 = 0; tmp2 < tmp; tmp2++)
 			{
 				_putchar(space);
 			}
