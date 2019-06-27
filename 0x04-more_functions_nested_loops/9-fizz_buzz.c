@@ -32,7 +32,7 @@ int main(void)
 				}
 			}
 		}
-		if(tmp == 100)
+		if (tmp == 100)
 		{
 			break;
 		}
