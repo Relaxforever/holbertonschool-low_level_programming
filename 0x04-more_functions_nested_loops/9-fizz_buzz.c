@@ -32,7 +32,14 @@ int main(void)
 				}
 			}
 		}
-	printf(" ");
+		if(tmp == 100)
+		{
+			break;
+		}
+		else
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 	return (0);
