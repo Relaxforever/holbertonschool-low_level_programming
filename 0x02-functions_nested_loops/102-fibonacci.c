@@ -5,14 +5,14 @@
 */
 int main(void)
 {
-	unsigned long long int i;
-	unsigned long long int fibo = 1;
-	unsigned long long int nacci = 1;
-	unsigned long long int nextTerm;
+	long int i;
+	long int fibo = 1;
+	long int nacci = 1;
+	long int nextTerm;
 
-	for (i = 2; i < 50; ++i)
+	for (i = 2; i <= 51; ++i)
 	{
-		printf("%lld, ", fibo);
+		printf("%ld, ", fibo);
 		nextTerm = fibo + nacci;
 		fibo = nacci;
 		nacci = nextTerm;
