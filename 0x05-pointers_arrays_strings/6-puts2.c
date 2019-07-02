@@ -8,9 +8,16 @@ void puts2(char *str)
 {
 	int cont;
 
-	for (cont = 0; *str != '\0'; cont = cont + 2)
+	for (cont = 0; *str != '\0'; cont++)
 	{
-		_putchar(*str);
+		if (cont % 2 == 0)
+		{
+			_putchar(*str);
+		}
+		else
+		{
+			continue;
+		}
 		str = str + 2;
 	}
 	_putchar('\n');
