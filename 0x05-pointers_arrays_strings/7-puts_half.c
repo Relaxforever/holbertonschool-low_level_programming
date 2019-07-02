@@ -23,10 +23,13 @@ void puts_half(char *str)
 	}
 	else
 	{
-		length = (length - 1) / 2;
-		for (cont = length; *(str + cont) != '\0'; cont++)
+		if (length % 2 != 0)
 		{
-			_putchar(*(str + cont));
+			length = (length - (length - 1) / 2);
+			for (cont = length; *(str + cont) != '\0'; cont++)
+			{
+				_putchar(*(str + cont));
+			}
 		}
 	}
 	_putchar('\n');
