@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
-* _strlen - counts the len of a String
-* @s : takes the position of the string
+* puts_half - counts the len of a String
+* @str : takes the position of the string
 * Return: return the length of a  string
 */
 void puts_half(char *str)
@@ -16,7 +16,7 @@ void puts_half(char *str)
 	if (length % 2 == 0)
 	{
 		length = length / 2;
-		for(cont = length; *(str + cont) != '\0'; cont++)
+		for (cont = length; *(str + cont) != '\0'; cont++)
 		{
 			_putchar(*(str + cont));
 		}
@@ -24,7 +24,7 @@ void puts_half(char *str)
 	else
 	{
 		length = (length - 1) / 2;
-		for(cont = length; *(str + cont) != '\0'; cont++)
+		for (cont = length; *(str + cont) != '\0'; cont++)
 		{
 			_putchar(*(str + cont));
 		}
