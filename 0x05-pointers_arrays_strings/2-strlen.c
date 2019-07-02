@@ -1,22 +1,16 @@
-#include "holberton.h"
+Iinclude "holberton.h"
 /**
 * _strlen - counts the len of a String
 * @s : takes the position of the string
-* 
-**/
+* Return: return the length of a  string
+*/
 int _strlen(char *s)
 {
-	char arr[] = *s;
 	int cont;
 
-	for (cont = 0; cont <= arr; cont++)
+	for (cont = 0; *s != '\0'; s++)
 	{
 		cont++;
 	}
-	if (cont > 9)
-	{
-		putchar((cont / 10) + '0' );
-	}
-	_putchar((cont % 10) + '0');
-		
+	return (cont);
 }
