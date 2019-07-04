@@ -1,6 +1,6 @@
 /**
 *string_toupper - changes all lowercase letters of a string to uppercase
-*@*: change the words
+*@d: change the words
 *Return: The Uppercase string
 */
 char *string_toupper(char *d)
@@ -12,7 +12,7 @@ char *string_toupper(char *d)
 
 	for (len = 0; d[len] != '\0'; len++)
 	{
-		if ((d[len] > a) && (d[len] < z) )
+		if ((d[len] > a) && (d[len] < z))
 		{
 			d[len] = d[len] - sub;
 		}
