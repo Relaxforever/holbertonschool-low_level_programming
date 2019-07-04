@@ -9,7 +9,7 @@ char *cap_string(char *m)
 
 	for (len = 0; m[len] != '\0'; len++)
 	{
-		if (m[len] == 0)
+		if (len == 0)
 		{
 			if (m[len] >= 97 && m[len] <= 122)
 			{
