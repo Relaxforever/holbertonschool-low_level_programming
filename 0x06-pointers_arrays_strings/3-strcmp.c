@@ -14,7 +14,7 @@ int _strcmp(char *s1, char *s2)
 	for (lenS = 0; s2[lenS] != '\0'; lenS++)
 	{
 	}
-	if (lenF > lenS)
+	if (lenF != lenS)
 	{
 		return (*s1 - *s2);
 	}
