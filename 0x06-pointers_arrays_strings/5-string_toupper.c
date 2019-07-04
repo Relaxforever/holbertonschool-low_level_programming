@@ -12,7 +12,7 @@ char *string_toupper(char *d)
 
 	for (len = 0; d[len] != '\0'; len++)
 	{
-		if ((d[len] > a) && (d[len] < z))
+		if ((d[len] >= a) && (d[len] <= z))
 		{
 			d[len] = d[len] - sub;
 		}
