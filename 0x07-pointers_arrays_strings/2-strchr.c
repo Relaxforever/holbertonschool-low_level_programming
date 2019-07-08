@@ -1,4 +1,4 @@
-#include "holberton.h"
+
 /**
 *_strchr - detects when a character gets
 *@s: takes the array and evaluates it
@@ -11,15 +11,15 @@ char *_strchr(char *s, char c)
 
 	while (s[cont] != '\0')
 	{
-		if (s[cont] == c)
+		if (*s == c)
 		{
-			return (s + i);
+			return (s);
 		}
 	cont++;
 	}
-	if (s[cont] == c)
+	if (*s == c)
 	{
-		return (s + i);
+		return (s);
 	}
 	return ('\0');
 }
