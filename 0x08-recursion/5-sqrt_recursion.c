@@ -6,15 +6,15 @@
 */
 int secondaryfunc(int fi, int se)
 {
-        if (fi * fi > se)
-        {
-                return (-1);
-        }
-        if (fi * fi == se)
-        {
-                return (fi);
-        }
-        return (secondaryfunc(fi + 1, se));
+	if (fi * fi > se)
+	{
+		return (-1);
+	}
+	if (fi * fi == se)
+	{
+	return (fi);
+	}
+	return (secondaryfunc(fi + 1, se));
 }
 
 /**
