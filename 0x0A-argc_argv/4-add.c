@@ -10,9 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-	int one;
-	int two;
-	int mult;
+	 int one;
+	unsigned int two;
+	unsigned int mult;
 
 	for (one = 1; one < argc; one++)
 	{
