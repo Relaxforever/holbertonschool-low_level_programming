@@ -24,6 +24,7 @@ char *create_array(unsigned int size, char c)
 		{
 			tmp[count] = c;
 		}
+		tmp = '\0';
 		return (tmp);
 	}
 }
