@@ -27,11 +27,15 @@ char *_strdup(char *str)
 	char *buffer;
 	unsigned int count;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	strlen = _strlen(str);
 
 	buffer = malloc((strlen + 1) * sizeof(char));
 
-	if (str == NULL || buffer == NULL)
+	if (buffer == NULL)
 	{
 		return (NULL);
 	}
