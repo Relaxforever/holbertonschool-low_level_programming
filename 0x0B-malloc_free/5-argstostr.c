@@ -31,7 +31,7 @@ char *sec;
 
 	sec = buf;
 
-	if (buf == NULL || sec == NULL)
+	if (buf == NULL)
 	{
 		return (NULL);
 	}
