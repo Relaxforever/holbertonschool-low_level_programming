@@ -32,7 +32,7 @@ int **alloc_grid(int width, int height)
 			}
 			return (NULL);
 		}
-		for (cont2 = 0; cont2 < width; cont2++)
+		for (cont2 = 0; cont2 <= width; cont2++)
 		{
 			tmp[cont][cont2] = 0;
 		}
