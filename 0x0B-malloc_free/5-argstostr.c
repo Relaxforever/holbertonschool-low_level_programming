@@ -9,7 +9,7 @@
 char *argstostr(int ac, char **av)
 {
 
-int cont, cont2, cont3, cont4, cont5;
+int cont, cont2, cont3 = 0, cont4, cont5;
 char *buf;
 char *sec;
 
