@@ -25,7 +25,7 @@ char *sec;
 		}
 	cont3++;
 	}
-	cont3++;
+	cont3 += 1;
 
 	buf = malloc(cont3 * sizeof(char));
 
