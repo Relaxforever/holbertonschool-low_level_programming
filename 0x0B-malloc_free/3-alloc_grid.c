@@ -25,11 +25,11 @@ int **alloc_grid(int width, int height)
 
 		if (tmp[cont] == NULL)
 		{
+			free(tmp);
 			for (cont2 = 0; cont2 <= cont; cont2++)
 			{
 				free(tmp[cont2]);
 			}
-			free(tmp);
 			return (NULL);
 		}
 		for (cont2 = 0; cont2 < height; cont2++)
