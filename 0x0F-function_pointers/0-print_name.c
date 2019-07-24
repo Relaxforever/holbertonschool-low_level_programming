@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
 *print_name - gets and array and prints a name
 *@name: gets the array string
