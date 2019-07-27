@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	unsigned int cont = 0;
 	char *string;
 	int flag;
-	
+
 	va_start(typeofdata, format);
 	while (format[cont])
 	{
@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%c", va_arg(typeofdata, int));
 				break;
-			case 'i': 
+			case 'i':
 				printf("%i", va_arg(typeofdata, int));
 				break;
 			case 'f':
@@ -30,7 +30,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				string = va_arg(typeofdata, char *);
-				if ( string != NULL)
+				if (string != NULL)
 				{
 					printf("%s", string);
 					break;
@@ -39,7 +39,6 @@ void print_all(const char * const format, ...)
 				break;
 			default:
 				flag = 1;
-				break;
 		}
 			if (flag == 1 || cont == strlen(format) - 1)
 			{
@@ -48,6 +47,5 @@ void print_all(const char * const format, ...)
 			}
 			printf(", ");
 			cont++;
-	}
-	printf("\n");
+	} printf("\n");
 }

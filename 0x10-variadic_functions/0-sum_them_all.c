@@ -9,8 +9,8 @@ int sum_them_all(const unsigned int n, ...)
 	va_list arglist;
 	unsigned int cont;
 	int sum;
-	sum = 0;
 
+	sum = 0;
 	va_start(arglist, n);
 
 	for (cont = 0; cont < n; cont++)
