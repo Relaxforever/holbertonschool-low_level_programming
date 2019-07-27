@@ -11,15 +11,20 @@ void print_all(const char * const format, ...)
 	va_list typeofdata;
 	unsigned int cont = 0;
 	char *string;
-	int flag;
+
+	while (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 
 	va_start(typeofdata, format);
 	while (format[cont])
 	{
-		flag = 0;
 		switch (format[cont])
 		{
 			case 'c':
+
 				printf("%c", va_arg(typeofdata, int));
 				break;
 			case 'i':
@@ -37,15 +42,10 @@ void print_all(const char * const format, ...)
 				}
 				printf("(nil)");
 				break;
-			default:
-				flag = 1;
 		}
-			if (flag == 1 || cont == strlen(format) - 1)
-			{
-				cont++;
-				continue;
-			}
+		if ((format[cont] == 'c' || format[cont] == 'i' || format[cont] == 'f' ||
+		format[cont] == 's') && format[cont + 1] != 0)
 			printf(", ");
-			cont++;
-	} printf("\n");
+		cont++;
+	} printf("\n"), va_end(typeofdata);
 }
