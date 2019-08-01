@@ -34,7 +34,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	tmp->str = strdup(str);
 	tmp->len = _strlen(tmp->str);
-	tmp->next = NULL;
-	printf("[%d] %s\n", tmp->len, tmp->str);
+	tmp->next = *head;
+	*head = tmp;
 	return (tmp);
 }
