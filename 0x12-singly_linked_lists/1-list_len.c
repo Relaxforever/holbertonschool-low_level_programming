@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
+#include <stdlib.h>
 /**
 *print_list - prints all the elements of the list.
 *@h: the node it will take
@@ -11,6 +11,11 @@ size_t print_list(const list_t *h)
 	const list_t *ptr;
 
 	ptr = h;
+
+	if (ptr == NULL)
+	{
+		return (0);
+	}
 
 	for (con = 0; ptr != NULL; con++)
 	{
