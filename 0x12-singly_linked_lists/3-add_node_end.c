@@ -1,58 +1,44 @@
-#include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+#include "lists.h"
 /**
-* _strlen - counts the len of a String
-* @s : takes the position of the string
-* Return: return the length of a  string
+*add_node_end - add nodes at the end
+*@head: aleluya
+*@str: the string that will be changed
+*Return: The node
 */
-int _strlen(char *s)
-{
-	int cont;
-
-	for (cont = 0; *s != '\0'; s++)
-	{
-		cont++;
-	}
-	return (cont);
-}
-/**
-*add_node_end - add a node at the end.
-*@head: the head of the filesl
-*@str: the string given
-*
-**/
 list_t *add_node_end(list_t **head, const char *str)
 {
 	unsigned int con;
 	list_t *ptr;
 	list_t *tmp;
 
-	if (head == NULL)
+	tmp = malloc(sizeof(list_t));
+	if (tmp == NULL)
 	{
-		tmp = *head;
-		return (*head);
+		return (NULL);
 	}
 
-	tmp = *head;
+	tmp->str = strdup(str);
+		if (tmp->str == NULL)
+		{
+			free(tmp);
+		}
+	tmp->len = strlen(tmp->str);
+	tmp->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = tmp;
+		return (*head);
+	}
 	ptr = *head;
 
-	for (con = 0; ptr != NULL; con++)
+	for (con = 0; ptr->next != NULL; con++)
 	{
 		ptr = ptr->next;
 	}
-	ptr = malloc(sizeof(list_t));
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-	ptr->str = strdup(str);
-		if (ptr == NULL)
-		{
-			free(ptr);
-		}
-	ptr->len = _strlen(ptr->str);
-	ptr->next = NULL;
-	return (ptr);
+	ptr->next = tmp;
+	return (*head);
 }
