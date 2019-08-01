@@ -1,7 +1,6 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 /**
 * _strlen - counts the len of a String
 * @s : takes the position of the string
@@ -18,34 +17,24 @@ int _strlen(char *s)
 	return (cont);
 }
 /**
-*add_node_end - add a node at the end.
-*@head: the head of the filesl
-*@str: the string given 
-*
-**/
-list_t *add_node_end(list_t **head, const char *str)
+*add_node - adds a node at the beginning
+*@head: the start of the list
+*@str: the string given
+*Return: the node
+*/
+list_t *add_node(list_t **head, const char *str)
 {
-	unsigned int con;
-	list_t *ptr;
 	list_t *tmp;
 
 	tmp = *head;
-	ptr = *head;
-
-	for (con = 0; ptr != NULL; con++)
+	tmp = malloc(sizeof(list_t));
+	if (tmp == NULL)
 	{
-		ptr = ptr->next;
+		return (NULL);
 	}
-	ptr = malloc(sizeof(list_t));
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-	ptr->str = strdup(str);
-	ptr->len = _strlen(str);
-	ptr->next = malloc (sizeof(list_t));
-	/**(ptr->next)->next = NULL;
-	(ptr->next)->str = NULL;*/
-	return (ptr);
-	
+	tmp->str = strdup(str);
+	tmp->len = _strlen(tmp->str);
+	tmp->next = NULL;
+	printf("[%d] %s\n", tmp->len, tmp->str);
+	return (tmp);
 }
