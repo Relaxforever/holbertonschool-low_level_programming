@@ -1,10 +1,11 @@
 #include <stdio.h>
 /**
-*myStartupFun - Executes before the main
+*beforeMain - Executes before the main
 *Return: Nothing
 */
-void myStartupFun(void)
+void beforeMain(void)
 {
-	printf("You're beat! and yet, you must allow,
-		\nI bore my house upon my back!\n");
+	char *strings = "You're beat! and yet, you must allow,\n";
+
+	printf("%sI bore my house upon my back!\n");
 }
