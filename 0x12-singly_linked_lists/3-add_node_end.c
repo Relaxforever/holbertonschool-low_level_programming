@@ -3,6 +3,20 @@
 #include <stdio.h>
 #include "lists.h"
 /**
+ *_strlen - program thisgs
+ *Result: always return 0
+ *@s: variable de entrada
+ *Return: value depending on function
+ */
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+		c++;
+	return (c);
+}
+/**
 *add_node_end - add nodes at the end
 *@head: aleluya
 *@str: the string that will be changed
@@ -25,7 +39,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		{
 			free(tmp);
 		}
-	tmp->len = strlen(tmp->str);
+	tmp->len = _strlen(tmp->str);
 	tmp->next = NULL;
 
 	if (*head == NULL)
