@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 	for (len = 0; n >> len; len++)
 	{
 	}
-	if (len >= 31)
+	if (len > 31)
 	{
 		write(1, &one, 1);
 	}
