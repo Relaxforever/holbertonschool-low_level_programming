@@ -6,7 +6,8 @@
 */
 void print_binary(unsigned long int n)
 {
-	int len, binary, cont;
+	int len, cont;
+	unsigned int binary;
 	char zero = '0';
 	char one = '1';
 
