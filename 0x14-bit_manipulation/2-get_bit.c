@@ -6,18 +6,9 @@
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int cont;
-
 	if (index < 64)
 	{
-
-		for (cont = 0; n >> cont; cont++)
-		{
-			if (index == cont)
-			{
-				return ((n >> index) & 1);
-			}
-		}
+		return ((n >> index) & 1);
 	}
 	return (-1);
 }
