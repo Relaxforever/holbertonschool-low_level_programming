@@ -8,11 +8,15 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int cont;
 
-	for (cont = 0; n >> cont; cont++)
+	if (index < 64)
 	{
-		if (index == cont)
+
+		for (cont = 0; n >> cont; cont++)
 		{
-			return ((n >> index) & 1);
+			if (index == cont)
+			{
+				return ((n >> index) & 1);
+			}
 		}
 	}
 	return (-1);
