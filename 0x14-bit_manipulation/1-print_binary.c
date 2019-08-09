@@ -15,14 +15,8 @@ void print_binary(unsigned long int n)
 	{
 		write(1, &zero, 1);
 	}
-	len = 0;
-	/**for (len = 0; n >> len; len++)
+	for (len = 0; n >> len; len++)
 	{
-	}
-	*/
-	while (n >> len)
-	{
-		len++;
 	}
 	for (cont = len - 1; cont >= 0; cont--)
 	{
