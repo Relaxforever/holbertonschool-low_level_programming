@@ -4,9 +4,9 @@
 * @s : takes the position of the string
 * Return: return the length of a  string
 */
-int _strlen(char *s)
+size_t _strlen(char *s)
 {
-	int cont;
+	size_t cont;
 
 	for (cont = 0; *s != '\0'; s++)
 	{
@@ -23,8 +23,8 @@ int _strlen(char *s)
 int create_file(const char *filename, char *text_content)
 {
 	int fd = 0;
-	int lenT = 0;
-	int lenB = 0;
+	size_t lenT = 0;
+	ssize_t lenB = 0;
 
 	lenT = _strlen(text_content);
 	if (filename == NULL)
