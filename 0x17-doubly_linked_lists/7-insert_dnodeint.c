@@ -50,10 +50,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		{
 			tmp = tmp->next;
 		}
-		if (idx == lenofnode)
+		if (tmp->next == NULL)
 		{
-			add_dnodeint_end(h, n);
-			return (*h);
+			ptr = add_dnodeint_end(h, n);
+			return (ptr);
 		}
 		ptr->prev = tmp;
 		ptr->next = tmp->next;
