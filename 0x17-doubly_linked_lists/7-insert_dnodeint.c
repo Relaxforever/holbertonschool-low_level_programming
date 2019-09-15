@@ -30,7 +30,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int cont = 0;
 	size_t lenofnode = 0;
 	dlistint_t *ptr;
-	dlistint_t *tmp;
+	 dlistint_t *tmp;
 
 	if (h == NULL)
 		return (NULL);
@@ -41,6 +41,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	lenofnode = dlistint_len(tmp);
 	if (idx <= lenofnode)
 	{
+		if (idx == 0)
+		{
+			add_dnodeint(h, n);
+			return (*h);
+		}
 		for (cont = 0; cont < (idx - 1); cont++)
 		{
 			tmp = tmp->next;
@@ -49,10 +54,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		ptr->next = tmp->next;
 		ptr->n = n;
 		tmp->next = ptr;
+		return (ptr);
 	}
 	else
 	{
 		return (NULL);
 	}
-	return (ptr);
+	return (NULL);
 }
