@@ -51,18 +51,19 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			free(kill);
 			return (1);
 		}
-		for (cont = 0; cont < (index - 1); cont++)
-			kill = kill->next;
 		if (lenofnode == index)
 		{
 			kill->prev->next = kill->next;
 			free(kill);
 			return (1);
 		}
+		for (cont = 0; cont < (index - 1); cont++)
+			kill = kill->next;
 		kill->prev->next = kill->next;
 		if (kill->next)
 			kill->next->prev = kill->prev;
 		free(kill);
+		return (1);
 	}
-	return (1);
+	return (-1);
 }
