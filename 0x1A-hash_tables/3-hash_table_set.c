@@ -19,10 +19,6 @@ hash_node_t *add_node(hash_node_t **head, const char *str, const char
 	}
 	tmp->value = strdup(str);
 	tmp->key = strdup(key);
-		if (tmp->value == NULL)
-		{
-			free(tmp);
-		}
 	tmp->next = *head;
 	*head = tmp;
 	return (tmp);
@@ -42,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char
 	hash_node_t *tmp;
 	int flag = 0;
 
-	if (key == NULL || strcmp(key, ""))
+	if (key == NULL || strcmp(key, "") || value == NULL || ht == NULL)
 	{
 		return (FAILED);
 	}
