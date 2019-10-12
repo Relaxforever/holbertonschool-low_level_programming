@@ -55,6 +55,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char
 		{
 			if (strcmp(tmp->key, key) == 0)
 			{
+				free(tmp->value);
 				tmp->value = strdup(value);
 				flag = 1;
 			}
