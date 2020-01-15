@@ -4,10 +4,12 @@
  * @array: the pointer to the array given
  * @size: the size of the array
  * @value: the value that will be search
+ * Return: the index of the computer
  */
 int linear_search(int *array, size_t size, int value)
 {
 	size_t cont = 0;
+
 	if (array == NULL)
 	{
 		return (-1);
